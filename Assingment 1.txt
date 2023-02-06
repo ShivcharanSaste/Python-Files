@@ -1,0 +1,87 @@
+Q1. What are the characteristics of the tuples? Is tuple immutable?
+
+Some of the characteristics features of Tuples are:
+Tuples are defined in the same way as lists.
+They are enclosed within parenthesis and not within square braces.
+Elements of the tuple must have a defined order.
+Negative indices are counted from the end of the tuple, just like lists.
+Tuple also has the same structure where commas separate the values.
+
+Q2. What are the two tuple methods in python? Give an example of each method. Give a reason why
+tuples have only two in-built methods as compared to Lists.
+
+Two tuple methods in python are count() and index().
+example,
+no=(1,3,2,3,4,5)
+count=no.count(3)
+print("The count of 1 is:",count)
+
+vowels=('a','b','c','d','e')
+index=vowels.index('c')
+print(index)
+
+Q3. Which collection datatypes in python do not allow duplicate items? Write a code using a set to remove
+duplicates from the given list.
+List = [1, 1, 1, 2, 1, 3, 1, 4, 2, 1, 2, 2, 2, 3, 2, 4, 3, 1, 3, 2, 3, 3, 3, 4, 4, 1, 4, 2, 4, 3, 4, 4]
+
+Sets in python does not allow duplicates in python.
+CODE:
+List = [1, 1, 1, 2, 1, 3, 1, 4, 2, 1, 2, 2, 2, 3, 2, 4, 3, 1, 3, 2, 3, 3, 3, 4, 4, 1, 4, 2, 4, 3, 4, 4]
+print(list(set(List)))
+
+Q4. Explain the difference between the union() and update() methods for a set. Give an example of
+each method.
+
+They are very different. One set changes the set in place, while the other leaves the original set alone, and returns a copy instead.
+The _update methods modify the set in-place and return None. The methods without update return a new object. 
+Examples,
+my_set = {11, 60}
+my_set.update([20, 13, 8])
+print(my_set)
+
+first_set = {1, .
+5, 7, 4, 5}
+second_set = {4, 5, 6, 7, 8}
+new_set = first_set | second_set 
+print(new_set)
+
+Q5. What is a dictionary? Give an example. Also, state whether a dictionary is ordered or unordered.
+
+The dictionary is an unordered collection that contains key:value pairs separated by commas inside curly brackets. Dictionaries are optimized to retrieve values when the key is known.
+Dictionary is unordered.
+capitals = {"USA":"Washington D.C.", "France":"Paris", "India":"New Delhi"}
+print(capitals)
+
+
+Q6. Can we create a nested dictionary? If so, please give an example by creating a simple one-level
+nested dictionary.
+
+Yes,we can create nested dictionary.
+Example,
+nested_dict = { 'dictA': {'key_1': 'value_1'},
+                'dictB': {'key_2': 'value_2'}}
+print(nested_dict)
+
+Q7. Using setdefault() method, create key named topics in the given dictionary and also add the value of
+the key as this list ['Python', 'Machine Learning’, 'Deep Learning']
+
+dict1 = {'language' : 'Python', 'course': 'Data Science Masters'}
+dict=dict1.setdefault("topics":[])
+                      dict["topics"]+=['python','machine learning','deep learning']
+                                       print(dict)
+                                       
+Q8. What are the three view objects in dictionaries? Use the three in-built methods in python to display
+these three view objects for the given dictionary.
+dict1 = {'Sport': 'Cricket' , 'Teams': ['India', 'Australia', 'England', 'South Africa', 'Sri Lanka', 'New Zealand']}
+
+dict1 = {'Sport': 'Cricket' , 'Teams': ['India', 'Australia', 'England', 'South Africa', 'Sri Lanka', 'New Zealand']}
+print(dict1.keys())
+print(dict1.values())
+print(dict1.items())
+
+OUTPUT:
+
+dict_keys(['Sport', 'Teams'])
+dict_values(['Cricket', ['India', 'Australia', 'England', 'South Africa', 'Sri Lanka', 'New Zealand']])
+dict_items([('Sport', 'Cricket'), ('Teams', ['India', 'Australia', 'England', 'South Africa', 'Sri Lanka', 'New Zealand'])])
+
